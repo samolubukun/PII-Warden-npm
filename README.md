@@ -124,6 +124,17 @@ You can easily bind the detector to textareas, inputs, or contenteditable divs t
 
 ---
 
+## Model Details & Provenance
+
+The ML component of the hybrid engine uses a dual-stage architecture optimization:
+
+* **Base Model:** The core classification is powered by [`samuelolubukun/pii-ner-finetuned-distilbert`](https://huggingface.co/samuelolubukun/pii-ner-finetuned-distilbert). This model is a fine-tune of **DistilBERT** trained on top of **AI4Privacy's** high-quality multilingual PII dataset, optimized for Token Classification (NER).
+* **Edge ONNX Model:** To support fast, zero-latency, in-browser execution, the base model is quantized and compiled using Hugging Face's **Optimum** toolchain to create [`samuelolubukun/pii-ner-edge-optimized`](https://huggingface.co/samuelolubukun/pii-ner-edge-optimized).
+  * **Quantization:** INT8 quantization is applied to reduce the model size from **~260MB** down to **~67MB**.
+  * **Performance:** This allows the model to download quickly, run on standard user devices using WebAssembly ONNX Runtime Web, and complete inferences client-side with negligible accuracy loss.
+
+---
+
 ## License
 
 MIT
