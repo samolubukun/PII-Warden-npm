@@ -1,0 +1,24 @@
+{
+  "name": "pii-warden",
+  "version": "1.0.0",
+  "description": "Privacy-first, hybrid client-side PII detection and redaction engine using local regex/checksums and Transformers.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [
+    "pii",
+    "redaction",
+    "anonymization",
+    "privacy",
+    "ner",
+    "transformers",
+    "onnx"
+  ],
+  "author": "Samuel Olubukun",
+  "license": "MIT",
+  "dependencies": {
+    "@huggingface/transformers": "^3.0.0"
+  }
+}
