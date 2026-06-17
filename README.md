@@ -1,5 +1,9 @@
 # 🛡️ PII Warden
 
+[![npm version](https://img.shields.io/npm/v/pii-warden.svg)](https://www.npmjs.com/package/pii-warden)
+[![npm downloads](https://img.shields.io/npm/dm/pii-warden.svg)](https://www.npmjs.com/package/pii-warden)
+[![license](https://img.shields.io/npm/l/pii-warden.svg)](https://github.com/samolubukun/PII-Warden-npm/blob/main/LICENSE)
+
 Privacy-first, client-side PII (Personally Identifiable Information) detection and redaction engine for web browsers and Node.js. 
 
 It combines **160+ local regex/checksum patterns** with **client-side ONNX machine learning models** using Hugging Face's Transformers.js.
